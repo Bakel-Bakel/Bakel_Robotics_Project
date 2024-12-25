@@ -1,0 +1,54 @@
+\contentsline {chapter}{\numberline {1}Kinematics}{6}{}%
+\contentsline {section}{\numberline {1}Solutions to Kinematic Problems}{7}{}%
+\contentsline {subsection}{\numberline {1.1}Forward Kinematic Problem}{7}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Homogeneous Transformation Matrix}{7}{}%
+\contentsline {subsubsection}{\numberline {1.1.2}Denavit–Hartenberg (D-H) Convention}{10}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}Screw Theory}{14}{}%
+\contentsline {subsubsection}{\numberline {1.1.4}Verification with Corke's Robotics Toolbox}{17}{}%
+\contentsline {subsection}{\numberline {1.2}Inverse Kinematic Problem}{19}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Verification with Corke's Robotics Toolbox}{22}{}%
+\contentsline {subsection}{\numberline {1.3}Representing my end-effector in terms of Euler angles}{22}{}%
+\contentsline {chapter}{\numberline {2}Working Space}{24}{}%
+\contentsline {subsection}{\numberline {2.1}Code for the workspace}{25}{}%
+\contentsline {subsection}{\numberline {2.2}Results}{25}{}%
+\contentsline {chapter}{\numberline {3}Jacobian}{28}{}%
+\contentsline {subsection}{\numberline {3.1}Geometric Jacobian}{28}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Verification with Corke's Robotics Toolbox}{31}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Comparison and Proof}{31}{}%
+\contentsline {subsection}{\numberline {3.2}Analytical Jacobian}{32}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Verification with Corke's Robotics Toolbox}{36}{}%
+\contentsline {chapter}{\numberline {4}Trajectory Planning}{37}{}%
+\contentsline {subsection}{\numberline {4.1}Mathematical Derivation for Linear and Circular Paths}{37}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Linear Trajectory}{37}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Circular Trajectory}{37}{}%
+\contentsline {subsubsection}{\numberline {4.1.3}Matlab Code}{38}{}%
+\contentsline {subsubsection}{\numberline {4.1.4}Result}{39}{}%
+\contentsline {chapter}{\numberline {5}Kinematic Inversion with Inverse and Transpose of the Jacobian}{42}{}%
+\contentsline {subsection}{\numberline {5.1}Conceptual Background}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Method 1: Inverse Jacobian}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Method 2: Transpose Jacobian}{43}{}%
+\contentsline {subsection}{\numberline {5.2}Trajectory Planning and Execution}{43}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Explanation of the Pathway and Euler Angle \(\phi \)}{44}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Consequences of Not Defining \(\phi \)}{44}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}Explanation of Including \(q_4\) (\(\phi \)) in the Operational Space }{44}{}%
+\contentsline {subsubsection}{\numberline {5.2.4}Advantages of Defining \(\phi \)}{45}{}%
+\contentsline {subsection}{\numberline {5.3}Inverse Jacobian}{46}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}Code Implementation}{46}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}Results}{48}{}%
+\contentsline {subsection}{\numberline {5.4}Transpose Jacobian}{49}{}%
+\contentsline {subsubsection}{\numberline {5.4.1}Code Implementation}{49}{}%
+\contentsline {subsubsection}{\numberline {5.4.2}Results}{50}{}%
+\contentsline {subsection}{\numberline {5.5}Key Considerations in the Code}{51}{}%
+\contentsline {subsection}{\numberline {5.6}Simulink Models}{51}{}%
+\contentsline {subsection}{\numberline {5.7}Conclusion}{53}{}%
+\contentsline {chapter}{\numberline {6}Relaxing a Component of Operational Space}{54}{}%
+\contentsline {subsection}{\numberline {6.1}Relaxation of the Orientation Component (\(\phi \))}{54}{}%
+\contentsline {subsection}{\numberline {6.2}Relaxation of the \(z\)-Component}{54}{}%
+\contentsline {subsection}{\numberline {6.3}Maximizing the Distance from Joint Limits}{54}{}%
+\contentsline {subsection}{\numberline {6.4}Incorporating Obstacles}{55}{}%
+\contentsline {subsection}{\numberline {6.5}Code}{56}{}%
+\contentsline {subsection}{\numberline {6.6}Results}{56}{}%
+\contentsline {subsection}{\numberline {6.7}Observations}{58}{}%
+\contentsline {subsection}{\numberline {6.8}Simulink Model}{58}{}%
+\contentsline {subsection}{\numberline {6.9}Conclusion}{59}{}%
+\contentsline {chapter}{References}{60}{}%

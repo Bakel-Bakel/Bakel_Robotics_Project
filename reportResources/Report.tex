@@ -1,0 +1,19 @@
+\documentclass{report}
+
+% Custom section numbering without chapter prefix
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+\begin{document}
+	
+	\section{Main Section} % This will be numbered 1
+	This is the main section.
+	
+	\subsection{First Subsection} % This will be numbered 1.1
+	This is the first subsection.
+	
+	\subsubsection{Second Subsubsection} % This will be numbered 1.1.1
+	This is the subsubsection.
+	
+\end{document}

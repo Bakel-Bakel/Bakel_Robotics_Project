@@ -1,0 +1,194 @@
+\documentclass[12pt]{report}
+%\renewcommand\thesection{\thechapter.\arabic{section}}
+%\setcounter{chapter}{0} % Start chapter numbering from 1
+% Remove chapter number from section numbering
+
+\usepackage{titlesec} % For customizing section numbering
+
+% Custom section numbering to exclude chapter numbers
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Ensure subsubsections are included in the table of contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\graphicspath{{}}
+
+\title{Robotics Project Report}
+\author{BAKEL BAKEL}
+\date{November, 2024}
+
+\begin{document}
+	
+	\maketitle
+	
+\tableofcontents % Optional: to display the table of contents
+
+	\chapter{Kinematics}
+	
+Given the SCARA robot manipulator below,\\ 
+	
+	\begin{center}
+	\includegraphics[scale = 1.25]{question}
+	\end{center}
+I aim to determine: 
+	\begin{enumerate}
+		\item The solution to the forward kinematic problem 
+		\item The solution to the inverse kinematic problem
+		 
+	\end{enumerate}
+\newpage
+	\section{Forward Kinematic Problem}
+The forward kinematics problem of a robotic system can be addressed through various methodologies and conventions. In this course, the problem was solved with the use of the \textbf{\emph{homogenous transformation matrix}};
+	\begin{equation} 
+	T^\mathrm{b}_\mathrm{e}(\mathbf{q}) = 
+	\begin{bmatrix}
+		\mathbf{n}^\mathrm{b}_\mathrm{e}(\mathbf{q}) & \mathbf{s}^\mathrm{b}_\mathrm{e}(\mathbf{q}) & \mathbf{a}^\mathrm{b}_\mathrm{e}(\mathbf{q}) & \mathbf{p}^\mathrm{b}_\mathrm{e}(\mathbf{q}) \\
+		0 & 0 & 0 & 1
+	\end{bmatrix}
+\end{equation}
+\\and the \textbf{\emph{Denavit–Hartenberg (D-H) Convention}}, both of which provide systematic frameworks for determining the position and orientation of a robot's end-effector. For this project, I applied all the methods covered in class and extended the scope by incorporating an additional method known as \textbf{\emph{Screw Theory}}, to analyze and solve the forward kinematics. 
+
+
+By utilizing these methods, the forward kinematic analysis benefits from both systematic parameterization (Homogeneous Matrix and D-H Convention) and advanced geometric interpretation (Screw Theory). This comprehensive approach ensures robustness and flexibility in solving complex robotic configurations.
+
+\subsection{Homogeneous Transformation Matrix} This method involves the representation of spatial transformations (rotation and translation) in a unified 4x4 matrix format. Each link and joint of the robot is described by a sequence of transformations, which, when combined, determine the final position and orientation of the end-effector in the base frame.
+\\\\Key Features:
+\begin{enumerate}
+	\item Encodes rotation using a 3x3 rotation matrix.
+	\item Encodes translation as a 3x1 vector.
+	\item Allows easy composition of transformations using matrix multiplication.
+\end{enumerate}
+\subsubsection{Solution using Homogeneous Transformation Matrix}
+	\begin{center}
+	\includegraphics[scale = 0.25]{001}
+\end{center}
+	\begin{center}
+\textit{Figure 2: Diagram of Frames of the SCARA Robot}
+\end{center}
+Equation 1.2 gives the formula for the forward kinematics of the scara robot as obtained from Figure 2
+	\begin{equation} 
+	T^b_e = T^b_1\cdot T^1_2\cdot T^2_3\cdot T^3_e 
+\end{equation}
+
+
+\begin{equation}
+	T_1^b=\left[\begin{array}{cccc}
+		\cos \theta_1 & -\sin \theta_1 & 0 & 0 \\
+		\sin \theta_1 & \cos \theta_1 & 0 & 0 \\
+		0 & 0 & 1 & d_0 \\
+		0 & 0 & 0 & 1
+	\end{array}\right]
+\end{equation}
+
+
+\begin{equation}
+	T_2^1=\left[\begin{array}{cccc}
+			\cos \theta_2 & -\sin \theta_2 & 0 & 0 \\
+			\sin \theta_2 & \cos \theta_2 & 0 & a_1 \\
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1
+		\end{array}\right]
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		T_3^2=\left[\begin{array}{llll}
+			1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & a_2 \\
+			0 & 0 & 1 & d_3 \\
+			0 & 0 & 0 & 1
+		\end{array}\right]
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		 T_e^3=\left[\begin{array}{cccc}
+			\cos \theta_4 & -\sin \theta_4 & 0 & 0 \\
+			\sin \theta_4 & \cos \theta_4 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1
+		\end{array}\right] 
+	\end{aligned}
+\end{equation}
+
+Finally, the forward kinematics can be determined by
+	\begin{equation} 
+	T^b_e = T^b_1\cdot T^1_2\cdot T^2_3\cdot T^3_e 
+\end{equation}
+Solve this by hand? As an engineer, I will do no such!
+I love mathematical rigour but I am an efficient engineer.
+I have decided to flex the power of python to solve symbolically the said matrics equation. The \textbf{Sympy} Library was used for this task.
+
+\hspace{-10mm} 
+	\includegraphics[scale = 0.9]{python1}
+	
+	\hspace{-10mm} 
+	\includegraphics[scale = 0.9]{python3}
+
+Upon running the code, the following matrix was gotten. This is the solution to our forward kinematic problem.
+
+\hspace{-15mm}
+\begin{tabular}{cc}
+	\includegraphics[scale=0.3]{voila} & 
+	\includegraphics[scale= 1.1]{python4} \\
+	
+\end{tabular}
+	\begin{center}
+
+	\textbf{VOILAA!!!}
+\end{center}
+
+
+\subsection{Denavit–Hartenberg (D-H) Convention}
+
+This is a standardized convention for modeling the forward kinematics of serial-chain robots. It simplifies the process by defining each joint’s coordinate frame through four parameters: link length, link twist, link offset, and joint angle.\\\\
+Key Features:
+\begin{enumerate}[label=\roman*.]
+	\item Reduces the complexity of defining coordinate systems.
+	\item Provides a compact parameterization of the robot's kinematic chain.
+	\item Supports systematic derivation of transformation matrices for each joint.
+\end{enumerate}
+
+
+
+
+
+	\begin{center}
+	\includegraphics[scale = 0.25]{1}
+\end{center}
+	\begin{center}
+	\includegraphics[scale = 0.3]{2}
+\end{center}
+	\begin{center}
+	\includegraphics[scale = 0.3]{3}
+\end{center}
+	\begin{center}
+	\includegraphics[scale = 0.3]{4}
+\end{center}
+	\begin{center}
+	\includegraphics[scale = 0.3]{5}
+\end{center}
+	\begin{center}
+	\includegraphics[scale = 0.3]{6}
+\end{center}
+
+\subsection{Screw Theory}
+
+Screw Theory offers a geometric and algebraic framework to describe motion and kinematics in terms of twists (velocity screws) and wrenches (force screws). It represents the motion of a rigid body as a combination of rotational and translational components about a screw axis.\\\\
+Key Features:
+\begin{enumerate}[label=\roman*.]
+	\item Models motion using Plücker coordinates for lines.
+	\item Efficiently handles instantaneous kinematics, including singularities and constraints.
+	\item Extends naturally to spatial motion analysis, offering insights into both the kinematic and dynamic aspects of robotic systems.
+\end{enumerate}
+	\chapter{Working Space}
+	\chapter{Jacobian}
+	\chapter{Trajectory Planning}
+\end{document}

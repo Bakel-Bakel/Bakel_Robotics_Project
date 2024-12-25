@@ -1,0 +1,48 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagram of the Question}}{6}{}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Diagram of Frames of the SCARA Robot}}{8}{}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Definition of the frames}}{11}{}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Determination of Frame 1}}{11}{}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Illustration of Retaining the Given Base Frame for Consistency with Problem Specifications.}}{12}{}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Determination of Frame 2}}{13}{}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Determination of Frame 3}}{13}{}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Schematics showing all the DH Frames of the SCARA robot}}{14}{}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Schematics showing all the DH Frames of the SCARA robot}}{17}{}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Schematics showing DH table of the SCARA robot using joints}}{17}{}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces The Transformation Matrix}}{18}{}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Model of the SCARA robot}}{18}{}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Model of the SCARA robot in ZY Frame}}{19}{}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Top View (XY Plane) of the robot}}{20}{}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Top View of the SCARA robot to solve inverse kinematics}}{21}{}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Verification of Inverse Kinematics from Corke's Robotics Toolbox}}{22}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Code Snippet of the Workspace}}{25}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 3D View of the Working Space}}{26}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces XY Plane View of the Working Space}}{27}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces ZX Plane View of the Working Space}}{27}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Verification of Geometric Jacobian from Corke's Robotics Toolbox}}{31}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Verification of Analytical Jacobian from Corke's Robotics Toolbox}}{36}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces XZ Plane of the path}}{39}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces XY Plane of the path showing vertical and horizontal lines and circular section}}{40}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 3D View of the planned path}}{40}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces XY Plane of the planned path and working space}}{41}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 3D View of the planned path and working space}}{41}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Inclusion of Euler Angle to the Operational Space}}{45}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Kinematic Inversion using Inverse Jacobian Method 1}}{48}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Kinematic Inversion using Inverse Jacobian Method 2}}{48}{}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Kinematic Inversion using Jacobian Transpose Method 1}}{50}{}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Kinematic Inversion using Jacobian Transpose Method 2}}{50}{}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Code for Tranpose and Inverse Jacobian}}{51}{}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Control Model for Inverse Jacobian}}{51}{}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Simulink Model for Inverse Jacobian}}{52}{}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Control Model for Transpose of Jacobian}}{52}{}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Simulink Model for Transpose of Jacobian}}{53}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Chapter 6 Code}}{56}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Relaxed phi}}{57}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Relaxed Z}}{57}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Simulink Model of the relaxed phi}}{58}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulink Model of the relaxed Z}}{59}{}%
