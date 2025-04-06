@@ -1,7 +1,8 @@
 # SCARA Robot Kinematics and Trajectory Planning
 
-## Overview![Screenshot from 2025-04-06 23-41-13](https://github.com/user-attachments/assets/f715cfaa-9b80-481e-94b5-08bdfec41270)
+![Screenshot from 2025-04-06 23-41-13](https://github.com/user-attachments/assets/f715cfaa-9b80-481e-94b5-08bdfec41270)
 
+## Overview
 
 
 https://github.com/user-attachments/assets/844a91c0-4a88-4e94-986a-2fa489d055b9
